@@ -185,7 +185,7 @@ export function CallUI(props: {
     // 'prompt' for a "telephone call"
     // FIXME: can easily run ouf of tokens - if this gets traction, we'll fix it
     const callPrompt: VChatMessageIn[] = [
-      { role: 'system', content: 'You are having a phone call. Your response style is brief and to the point, and according to your personality, defined below.' },
+      { role: 'system', content: 'You are having a phone call. Your response style is according to your personality, defined below.' },
       ...chatMessages.map(message => ({ role: message.role, content: message.text })),
       { role: 'system', content: 'You are now on the phone call related to the chat above. Respect your personality and answer with short, friendly and accurate thoughtful lines.' },
       ...callMessages.map(message => ({ role: message.role, content: message.text })),
